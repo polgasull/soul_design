@@ -6,13 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application' %>
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
     <%= yield :head %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "header" %>
 
+    <%= yield %>
+    
     <%= yield :footer %>
   </body>
 </html>
